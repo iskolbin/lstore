@@ -68,7 +68,7 @@ assert( x.y[1] == 1 and x.y[2] == 2 )
 store.redo( x )
 assert( x.y[1] == 0.5 and x.y[2] == 1 and x.y[3] == 2 )
 
-store.update( x, 'y', 3, function( v, k, obj ) return v + 1 end )
+store.update( x, 'y', 3, function( v ) return v + 1 end )
 assert( x.y[1] == 0.5 and x.y[2] == 1 and x.y[3] == 3 )
 store.undo( x )
 assert( x.y[1] == 0.5 and x.y[2] == 1 and x.y[3] == 2 )
