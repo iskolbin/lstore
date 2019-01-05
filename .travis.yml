@@ -20,5 +20,6 @@ install:
   - luarocks install luacheck
 
 script:
+  - luacheck -v
   - luacheck *.lua
   - lua test.lua
